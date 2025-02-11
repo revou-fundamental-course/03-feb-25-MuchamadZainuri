@@ -34,6 +34,8 @@ const showModal = () => {
   modal.style.display = "block";
   // Menambahkan class show pada elemen modal-section setelah 10ms
   setTimeout(() => modal.classList.add("show"), 10);
+  // Menambahkan class modal-open pada elemen body
+  document.body.classList.add("modal-open");
 };
 
 // Menambahkan event click pada elemen button dengan id result-explain-button yang akan di handle oleh fungsi showExplanation
@@ -48,7 +50,8 @@ addEvent("close-button", "click", () => {
   document.getElementById("modal-section").classList.remove("show");
 
   // Mengubah style display menjadi none setelah 300ms
-  setTimeout(() => {
-    document.getElementById("modal-section").style.display = "none";
-  }, 300);
+  setTimeout(() => document.getElementById("modal-section").style.display = "none", 300);
+
+  // Menghapus class modal-open pada elemen body
+  document.body.classList.remove("modal-open");
 });

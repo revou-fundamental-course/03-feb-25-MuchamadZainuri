@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>TCA - Revou</title>
-   <link rel="stylesheet" href="style.css">
+   <title>TCA</title>
+   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   
-   <script src="js/script.js"></script>
+   <!-- Header -->
+   <header id="header">
+      <h4 id="header-title">
+         Temperature Conversion App
+      </h4>
+   </header>
+   <!-- End of Header -->
+
+   <!-- Main Section -->
+   <main id="main">
+
+      <!-- Main Title -->
+      <section id="main-title">
+         <h1 id="conversion-title">Celcius to Fahrenheit</h1>
+      </section>
+      <!-- End of Main Title -->
+
+      <!-- Main Content -->
+      <section id="main-content">
+         <div class="card">
+            <label for="input-temperature" id="input-temperature-title">Celcius</label>
+            <div id="input-temperature-box">
+               <input type="number" id="input-temperature" placeholder="0" min="-273.15" step="0.01" max="1000"
+                  pattern="[0-9]+" title="Nilai harus berupa angka, minimal -273.15 dan maksimal 1000" required
+                  form="form-tca">
+               <span id="from-unit">°C</span>
+            </div>
+         </div>
+         <div class="optional-button">
+            <button type="reset" id="reset-button" form="form-tca"><i class="fa-solid fa-redo"></i></button>
+            <button type="button" id="reverse-button"><i class="fa-solid fa-exchange-alt"></i></button>
+         </div>
+         <div class="card" id="result-card">
+            <h3 id="temperature-result">Fahrenheit</h3>
+            <span id="result-value">0 °F</span>
+         </div>
+      </section>
+      <!-- End of Main Content -->
+
+      <!-- Optional Button -->
+      <section class="optional-button">
+         <button type="submit" id="convert-button" form="form-tca">Convert &nbsp;<i
+               class="fa-solid fa-thermometer-half"></i></button>
+         <button type="button" id="result-explain-button">Result Explanation &nbsp;<i
+               class="fa-solid fa-info-circle"></i></button>
+      </section>
+      <!-- End of Optional Button -->
+
+   </main>
+   <!-- End of Main Section -->
+
+   <!-- Footer -->
+   <footer id="footer">
+      <p id="footer-description">
+         Copyright &copy; 2025 <a href="https://www.linkedin.com/in/muchamadzainuri/" target="_blank">zdacoder</a> All
+         right reserved.
+      </p>
+   </footer>
+   <!-- End of Footer -->
+
+   <!-- Form Section -->
+   <section id="form-section">
+      <form action="" method="post" id="form-tca" spellcheck="false" autocomplete="off">
+      </form>
+   </section>
+   <!-- End of Form Section -->
+
+   <!-- Modal Section -->
+   <section id="modal-section">
+      <div id="modal">
+         <div class="modal-content">
+            <span id="close-button"><i class="fa-solid fa-times"></i></span>
+            <h3 id="subtitle-modal">
+               Cara Mengonversi dari <span id="from-unit-modal"></span> ke
+               <span id="to-unit-modal"></span>
+            </h3>
+            <div id="formula">
+               <strong>Rumus : </strong> <span id="conversion-formula"></span>
+            </div>
+            <div id="known-value">
+               <strong>Diketahui : </strong> <span id="known-v"></span>
+            </div>
+            <div id="calculation">
+               <strong>Perhitungan : </strong>
+               <span id="calculation-details"></span>
+            </div>
+            <div id="result">
+               <strong>Hasil : </strong> <span id="result-value-modal"></span>
+            </div>
+            <div id="explanation">
+               <h4>Penjelasan : </h4>
+               <ol id="explanation-list">
+               </ol>
+            </div>
+            <div id="conclusion">
+               <strong>Kesimpulan : </strong>
+               <span id="conclusion-text"></span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- End of Modal Section -->
+
+   <script src="js/main.js" type="module"></script>
+   <script src="https://kit.fontawesome.com/049039378b.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

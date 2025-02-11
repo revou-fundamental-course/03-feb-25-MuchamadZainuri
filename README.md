@@ -38,7 +38,7 @@ Temperature Conversion App (TCA) adalah aplikasi berbasis web yang memungkinkan 
 
 ## 🚀 Cara Menggunakan Aplikasi
 
-1. Masuk ke [Temperature Conversion App](https://revou-fundamental-course.github.io/TCA/)
+1. Masuk ke [Temperature Conversion App](https://revou-fundamental-course.github.io/03-feb-25-MuchamadZainuri/)
 2. Masukkan suhu dalam Celsius atau Fahrenheit yang ingin Anda konversi
 3. Pilih jenis suhu yang ingin Anda konversi (Celsius ke Fahrenheit atau Fahrenheit ke Celsius)
 4. Hasil konversi suhu akan ditampilkan secara real-time di layar

@@ -85,6 +85,12 @@ const reverseUnit = (temperatureConversions) => {
   // Mendapatkan elemen from-unit
   const unitElement = document.getElementById("from-unit");
 
+  // Mendapatkan elemen input-temperature
+  const inputTemp = document.getElementById("input-temperature");
+
+  // Tentukan apakah saat ini dalam Celsius atau Fahrenheit
+  const isCelsius = unitElement.textContent === "°C";
+
   // Mendapatkan conversionKey berdasarkan from-unit
   const conversionKey = unitElement.textContent === "°C" ? "F_to_C" : "C_to_F";
 
@@ -97,6 +103,19 @@ const reverseUnit = (temperatureConversions) => {
   document.getElementById("input-temperature-title").textContent = fromTemp;
   document.getElementById("temperature-result").textContent = toTemp;
   document.getElementById("result-value").textContent = `0${toUnit}`;
+
+  // Mengecek apakah saat ini dalam Celsius atau Fahrenheit
+  if (isCelsius) {
+    // Jika saat ini dalam Celsius, ubah ke Fahrenheit
+    inputTemp.min = "-459.67"; // Min Fahrenheit (-273.15°C)
+    inputTemp.max = "1832";    // Max Fahrenheit (1000°C)
+    inputTemp.title = "Nilai harus berupa angka, minimal -459.67 dan maksimal 1832";
+  } else {
+    // Jika saat ini dalam Fahrenheit, ubah ke Celsius
+    inputTemp.min = "-273.15";
+    inputTemp.max = "1000";
+    inputTemp.title = "Nilai harus berupa angka, minimal -273.15 dan maksimal 1000";
+  }
 };
 
 /**
